@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\URL;
 use PayPal\Api\Address;
+use PayPal\Api\Agreement;
 use PayPal\Api\Amount;
 use PayPal\Api\Details;
 use PayPal\Api\Authorization;
@@ -18,6 +19,8 @@ use PayPal\Api\Payee;
 use PayPal\Api\Payer;
 use PayPal\Api\PayerInfo;
 use PayPal\Api\Payment;
+use PayPal\Api\Patch;
+use PayPal\Api\PatchRequest;
 use PayPal\Api\Currency;
 use PayPal\Api\MerchantPreferences;
 use PayPal\Api\PaymentDefinition;
@@ -280,6 +283,18 @@ class Paypal{
 
     public function currency(){
         return new Currency();
+    }
+
+    public function patch(){
+        return new Patch();
+    }
+
+    public function patchRequest(){
+        return new PatchRequest();
+    }
+
+    public function agreement(){
+        return new Agreement();
     }
 
     /**
