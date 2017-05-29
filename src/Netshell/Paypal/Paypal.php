@@ -18,6 +18,11 @@ use PayPal\Api\Payee;
 use PayPal\Api\Payer;
 use PayPal\Api\PayerInfo;
 use PayPal\Api\Payment;
+use PayPal\Api\Currency;
+use PayPal\Api\MerchantPreferences;
+use PayPal\Api\PaymentDefinition;
+use PayPal\Api\Plan;
+use PayPal\Api\ChargeModel;
 use PayPal\Api\PaymentExecution;
 use PayPal\Api\PaymentHistory;
 use PayPal\Api\Presentation;
@@ -255,6 +260,22 @@ class Paypal{
     public function webProfile()
     {
         return new WebProfile;
+    }
+
+    public function subscriptionPlan(){
+        return new Plan();
+    }
+
+    public function paymentDefinition(){
+        return new PaymentDefinition();
+    }
+
+    public function chargeModel(){
+        return new ChargeModel();
+    }
+
+    public function merchantPreferences(){
+        return new MerchantPreferences();
     }
 
     /**
