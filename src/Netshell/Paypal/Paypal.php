@@ -278,6 +278,10 @@ class Paypal{
         return new MerchantPreferences();
     }
 
+    public function currency(){
+        return new Currency();
+    }
+
     /**
      * @param null $clientId
      * @param null $clientSecret
